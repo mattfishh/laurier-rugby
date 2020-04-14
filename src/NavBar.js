@@ -7,11 +7,11 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function NavBar() {
   return (
-    <Navbar  id="nav" expand="lg">
+  <Navbar variant="dark" id="nav" expand="lg">
   <Navbar.Brand href="/">Laurier Rugby</Navbar.Brand>
-  <Navbar.Toggle aria-controls="basic-navbar-nav" />
+  <Navbar.Toggle aria-controls="basic-navbar-nav " />
   <Navbar.Collapse id="basic-navbar-nav">
-    <Nav className="ml-auto">
+    <Nav className="mr-auto">
       <Nav.Link href="/">Home</Nav.Link>
       <Nav.Link href="/schedule">Schedule</Nav.Link>
       <Nav.Link href="/alumni">Alumni</Nav.Link>

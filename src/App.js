@@ -9,6 +9,7 @@ import { Alumni } from './Alumni';
 import { NoMatch } from './NoMatch';
 import {Media} from './Media';
 import {Sponsors} from './Sponsors';
+import { Layout } from './components/Layout';
 
 
 
@@ -16,6 +17,7 @@ class App extends Component{
   render(){
     return (
       <React.Fragment>
+        <Layout>
         <Router>
           <Switch>
             <Route exact path="/" component={Home} />
@@ -28,6 +30,7 @@ class App extends Component{
             <Route component={NoMatch} />
           </Switch>
         </Router>
+        </Layout>
       </React.Fragment>
     );
   }
