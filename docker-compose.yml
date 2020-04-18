@@ -1,0 +1,52 @@
+version: '3.7'
+services:
+  db:
+    container_name: db
+    restart: always
+    image: postgres
+    volumes:
+      - db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: db
+      POSTGRES_USER: laurier
+      POSTGRES_PASSWORD: rugby
+    networks:
+      - private
+    ports:
+      - 5432:5432
+
+  flyway:
+    container_name: flyway
+    image: flyway/flyway
+    command: migrate
+    restart: on-failure
+    depends_on:
+      - db
+    volumes:
+      - ./postgres/migrations/:/flyway/sql
+      - ./postgres/config:/flyway/conf
+
+  graphql:
+    container_name: graphql
+    restart: always
+    image: graphile/postgraphile
+    environment:
+      DATABASE_URL: postgres://laurier:rugby@db:5432/db
+    depends_on:
+      - db
+      - flyway
+    networks:
+      - private
+    ports:
+      - 5433:5433
+    command: [
+      "--connection", "postgres://laurier:rugby@db:5432/db",
+      "--enhance-graphiql",
+      "--port", "5433",
+    ]
+
+networks:
+  private:
+
+volumes:
+  db:
