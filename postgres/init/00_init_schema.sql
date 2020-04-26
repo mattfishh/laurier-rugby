@@ -2,11 +2,11 @@ CREATE TABLE "players" (
   "player_id" SERIAL PRIMARY KEY,
   "first_name" varchar,
   "last_name" varchar,
-  "height" int,
-  "weigth" int,
-  "birth_date" datetime,
-  "position" int,
-  "eligible" boolean,
+  "height" varchar,
+  "weight" int,
+  "birth_date" timestamp,
+  "position" varchar,
+  "eligible" int,
   "program" varchar,
   "hometown" varchar,
   "profile_image_id" int
@@ -37,7 +37,7 @@ CREATE TABLE "founders" (
 CREATE TABLE "schedule" (
   "game_id" SERIAL PRIMARY KEY,
   "other_team_id" int,
-  "game_time" datetime,
+  "game_time" timestamp,
   "laurier_score" int,
   "other_team_score" int
 );
@@ -55,8 +55,8 @@ CREATE TABLE "recruits" (
   "first_name" varchar,
   "last_name" varchar,
   "height" int,
-  "weigth" int,
-  "birth_date" datetime,
+  "weight" int,
+  "birth_date" timestamp,
   "high_school" varchar,
   "email" varchar,
   "interested_programs" varchar
