@@ -1,7 +1,9 @@
 import React from 'react'
+import RecruitForm from './components/RecruitForm';
 
 export const Recruits = () => (
-    <div>
-        <h2> future site of recruits</h2>
-    </div>
+    <div>         
+        <RecruitForm />
+    </div>  
 )
+

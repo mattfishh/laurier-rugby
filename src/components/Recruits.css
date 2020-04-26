@@ -1,0 +1,84 @@
+/*Form body class*/
+div.formDiv {
+    background-color: #3A175C;
+    color: white;
+
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    width: 80%;
+    padding: 10px 20px;
+    border-radius: 2%;
+}
+
+/*Header operating as form title*/
+h3.formTitle {
+    margin-top: -10px;
+}
+
+/*Set css for all question and answer boxes*/
+label.formLabel {
+    width: 25%;
+    font-weight: bolder;
+}
+
+label.formLabelTA {
+    font-weight: bold;
+}
+
+input.formInput {
+    width: 70%;
+    border-radius: 25px;
+    padding: 0px 10px;
+}
+
+textArea.formTextArea {
+    width: 100%;
+    border-radius: 10px;
+    height: 150px;
+
+    padding: 5px 10px;
+}
+
+/*Initialize, base, error and success messages*/
+p.errorMsg {
+    margin-top: 5px;
+    background-color: red;
+    border-radius: 25px;
+    width: 100%;
+    padding: 0px 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    height:auto;
+}
+
+p.successMsg {
+    margin-top: 5px;
+    background-color: #6BAB90;
+    border-radius: 25px;
+    width: 100%;
+    padding: 0px 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    height:auto;
+}
+
+p.cleanInputMsg{
+    margin-top: 0px;
+    background-color: #3A175C;
+    border-radius: 0px;
+    width: 100%;
+    padding: 0px 0px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0px;
+    height:0px;
+}
+
+/*The last block button should take up the entire contact us container*/
+formSubmit {
+    width:100%;
+}
