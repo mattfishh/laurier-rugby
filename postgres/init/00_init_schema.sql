@@ -47,7 +47,8 @@ CREATE TABLE "teams" (
   "school_name" varchar,
   "team_name" varchar,
   "mascot" varchar,
-  "homefield" varchar
+  "homefield" varchar,
+  "image_url" varchar
 );
 
 CREATE TABLE "recruits" (
