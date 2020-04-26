@@ -1,0 +1,21 @@
+{
+  "name": "gql-json",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "npm run postgraphile",
+    "postgraphile": "postgraphile --host 0.0.0.0 --port 8080 --enhance-graphiql --cors -c postgres://[USER]:[PASS]@172.17.0.1:5432/[DBNAME]",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "^10.15",
+    "npm": "^6.9"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "graphile-build-pg": "^4.5.3",
+    "pg": "^7.18.2",
+    "postgraphile": "^4.6.0"
+  }
+}
