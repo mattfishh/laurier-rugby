@@ -23,7 +23,7 @@ const GET_SCHEDULE = gql`
             }
         }
     }
-`
+`;
 
 export const Schedule = () => (
     <>
@@ -33,7 +33,10 @@ export const Schedule = () => (
         >
             {({ loading, error, data }) => {
                 if (loading) return <p>Loading...</p>;
-                if (error) return <p>Error :(</p>;
+                if (error) {
+                    console.log(error);
+                    return <p>Error</p>
+                };
 
                 return data.allSchedules.nodes.map(({
                     gameId,
@@ -47,10 +50,10 @@ export const Schedule = () => (
 
                     return (
                         <GameCard key={gameId}>
-                            <OpponentImage src={`${imageUrl}`} />
+                            <OpponentImage src={imageUrl} />
                             <GameInfo>
                                 <GameTitle>{(`Laurier Golden Hawks VS ${schoolName} ${teamName}`).toUpperCase()}</GameTitle>
-                                <GameDate>{moment(gameTime).format('MMMM Do YYYY, h:mm a')}</GameDate>
+                                <GameDate>{moment(gameTime).format('MMMM Do, YYYY @ h:mm a')}</GameDate>
                             </GameInfo>
                             <GameResult>
                                 <ScoreText>
