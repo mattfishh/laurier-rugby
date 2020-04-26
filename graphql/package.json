@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "npm run postgraphile",
-    "postgraphile": "postgraphile --host 0.0.0.0 --port 8080 --enhance-graphiql --cors -c postgres://[USER]:[PASS]@172.17.0.1:5432/[DBNAME]",
+    "postgraphile": "postgraphile --host 0.0.0.0 --port 8080 --enhance-graphiql --cors -c postgres://postgres:CP476@172.17.0.1:5432/postgres",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
