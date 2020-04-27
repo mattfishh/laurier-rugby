@@ -68,7 +68,7 @@ export const Schedule = () => (
         </Query>
         <div style={{ marginBottom: '4em' }} />
     </>
-)
+);
 
 const GameCard = styled.div`
     display: flex;
