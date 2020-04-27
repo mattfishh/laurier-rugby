@@ -1,13 +1,12 @@
 # https://www.graphile.org/postgraphile/deploying-gcp/
 
 beta_settings:
-  cloud_sql_instances: (INSTANCE-CONNECTION-NAME)=tcp:5432
+  cloud_sql_instances: eco-azimuth-275417:us-east1:laurier-rugby=tcp:5432
 
 # [START runtime]
 runtime: nodejs
 env: flex
 threadsafe: yes
-service: postgraphile
 
 automatic_scaling:
   min_instances: 0
