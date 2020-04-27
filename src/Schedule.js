@@ -7,7 +7,7 @@ var moment = require('moment');
 
 const GET_SCHEDULE = gql`
     query GetSchedules {
-        allSchedules {
+        allSchedules(orderBy: GAME_TIME_DESC) {
             nodes {
                 gameId
                 gameTime
