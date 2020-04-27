@@ -7,7 +7,7 @@ var moment = require('moment');
 
 const GET_SCHEDULE = gql`
     query GetSchedules {
-        allSchedules {
+        allSchedules(orderBy: GAME_TIME_DESC) {
             nodes {
                 gameId
                 gameTime
@@ -68,7 +68,7 @@ export const Schedule = () => (
         </Query>
         <div style={{ marginBottom: '4em' }} />
     </>
-)
+);
 
 const GameCard = styled.div`
     display: flex;
@@ -81,7 +81,8 @@ const GameCard = styled.div`
 
 const OpponentImage = styled.img`
     flex: 1;
-    max-width: 5em;
+    max-width: 6em;
+    height: auto;
     margin: 1em 2em 1em 2em;
 `;
 

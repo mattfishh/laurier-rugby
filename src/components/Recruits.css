@@ -9,7 +9,8 @@ div.formDiv {
 
     width: 80%;
     padding: 10px 20px;
-    
+  
+    font-family: Helvetica, sans-serif;
 }
 
 /*Header operating as form title*/
@@ -28,14 +29,12 @@ label.formLabelTA {
 }
 
 input.formInput {
-    width: 70%;
-    border-radius: 25px;
+    width: 75%;
     padding: 0px 10px;
 }
 
 textArea.formTextArea {
     width: 100%;
-    border-radius: 10px;
     height: 150px;
 
     padding: 5px 10px;
@@ -57,7 +56,6 @@ p.errorMsg {
 p.successMsg {
     margin-top: 5px;
     background-color: #6BAB90;
-    border-radius: 25px;
     width: 100%;
     padding: 0px 10px;
     text-align: center;
