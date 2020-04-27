@@ -38,9 +38,9 @@ const attributes = {
 // pixels
 const mobileMaxWidth = 768;
 
-export const PlayerProfile = ({ playerId = 19 }) => {
+export const PlayerProfile = (props) => {
     const isTabletOrMobile = useMediaQuery({ query: `(max-width: ${mobileMaxWidth}px)` })
-
+    const playerId = props.location.playerId
     return (
         <Query
         query={GET_SCHEDULE}
