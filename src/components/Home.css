@@ -1,0 +1,18 @@
+div.siteBody{
+	display: flex;
+
+	margin-top: 5%;
+	margin-bottom: 5%;
+	
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+div.previousScoreDiv{
+	width: 650px;
+}
+
+div.carousel-inner{
+	height:auto;
+	width: 650px;
+}
