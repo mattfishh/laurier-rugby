@@ -1,0 +1,55 @@
+h3.cardHeader {
+	margin-top:10px;
+	font-weight:bolder;
+}
+
+div.tierBackgroundPurple {
+    background-color: #3A175C;
+    color: white;
+
+    padding: 5px 10px;
+    border-radius: 15px;
+
+    margin-bottom: 35px;
+}
+
+.tierBackgroundYellow {
+	background-color: #ffd338;
+    color: black;
+
+    padding: 5px 10px;
+    border-radius: 15px;
+
+    margin-bottom: 25px;
+}
+
+ul.twoColList {
+	list-style-type:none;
+	display: inline-block;
+	width: 50%;
+	font-size: 18px;
+	font-weight: bold;
+
+	padding-bottom: 100%;
+    margin-bottom: -100%;
+}
+
+li.hideLiYellow{
+	color: #ffd338;
+}
+
+li.hideLiPurple{
+	color: #3A175C;
+}
+
+.btn-warning {
+	width: inherit;
+	font-weight:bold;
+	font-size: 24px;
+	border-radius: 15px;
+}
+
+div.centerButton {
+	width: 100%;
+	margin: 0 auto;
+}
