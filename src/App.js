@@ -16,22 +16,24 @@ import { Layout } from './components/Layout';
 class App extends Component{
   render(){
     return (
-      <React.Fragment>
-        <Layout>
-        <Router>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/schedule" component={Schedule} />
-            <Route path="/roster" component={Roster} />
-            <Route path="/alumni" component={Alumni} />
-            <Route path="/recruits" component={Recruits} />
-            <Route path="/media" component={Media} />
-            <Route path="/sponsors" component={Sponsors}/>
-            <Route component={NoMatch} />
-          </Switch>
-        </Router>
-        </Layout>
-      </React.Fragment>
+      <div>
+        <React.Fragment>
+          <Layout>
+          <Router>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/schedule" component={Schedule} />
+              <Route path="/roster" component={Roster} />
+              <Route path="/alumni" component={Alumni} />
+              <Route path="/recruits" component={Recruits} />
+              <Route path="/media" component={Media} />
+              <Route path="/sponsors" component={Sponsors}/>
+              <Route component={NoMatch} />
+            </Switch>
+          </Router>
+          </Layout>
+        </React.Fragment>
+      </div>
     );
   }
 }
