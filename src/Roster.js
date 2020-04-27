@@ -23,7 +23,7 @@ const GET_PLAYERS = gql`
     
 `;
 
-export const Roster = () => (
+export const Roster = (props) => (
     <>
         <div style={{ marginTop: '2em' }} />
         <RosterFlex>
@@ -49,7 +49,12 @@ export const Roster = () => (
                    
                     return (
                         <RosterFlex>
-                        <RosterCard key={playerId}>
+                        <RosterCard key={playerId} onClick={() => {
+                                props.history.push({
+                                    pathname: '/player-profile',
+                                    playerId,
+                            })
+                        }}>
                             <RosterImage src={imageUrl} />
                             <PlayerName>
                                 <PlayerNameText>{(`${firstName} ${lastName}`).toUpperCase()}</PlayerNameText>
