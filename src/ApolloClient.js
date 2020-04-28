@@ -1,7 +1,9 @@
 import ApolloClient from 'apollo-boost';
 
+console.log(process.env.REACT_APP_PRODUCTION_GRAPHQL_ENDPOINT)
+
 const client = new ApolloClient({
-  uri: 'https://eco-azimuth-275417.ue.r.appspot.com/graphql',
+  uri: process.env.REACT_APP_PRODUCTION_GRAPHQL_ENDPOINT,
 });
 
 export default client;
