@@ -36,7 +36,8 @@ const attributes = {
 }
 
 // pixels
-const mobileMaxWidth = 768;
+const mobileMaxWidth = 700;
+const smallMobileWidth = 400;
 
 export const PlayerProfile = (props) => {
     const isTabletOrMobile = useMediaQuery({ query: `(max-width: ${mobileMaxWidth}px)` })
@@ -70,18 +71,14 @@ export const PlayerProfile = (props) => {
                 if (isTabletOrMobile) {
                     return (
                         <PlayerCard>
-                            <MobilePlayerImageGroup>
-                                <PlayerPositionBlock>
-                                    {renderPosition(position)}
-                                </PlayerPositionBlock>
-                                <PlayerImage src={imageUrl} />
-                            </MobilePlayerImageGroup>
+                            <PlayerImage src={imageUrl} />
                             <PlayerInfo>
                                 <PlayerName>{(`${firstName} ${lastName}`).toUpperCase()}</PlayerName>
                                 {renderAttribute(attributes.HEIGHT, convertHeight(height))}
                                 {renderAttribute(attributes.WEIGHT, weight)}
                                 {renderAttribute(attributes.BIRTH_DATE, birthDate)}
                                 {renderAttribute(attributes.ELIGIBLE, eligible)}
+                                {renderAttribute(attributes.POSITION, position)}
                                 {renderAttribute(attributes.PROGRAM, program)}
                                 {renderAttribute(attributes.HOMETOWN, hometown)}
                             </PlayerInfo>
@@ -143,27 +140,42 @@ const PlayerCard = styled.div`
     display: flex;
     flex-direction: row;
     margin-top: 5em;
+    width: 100%;
+    max-width: 100%;
     height: 30em;
     border: 4px solid ${laurier_purple};
     background-color: ${laurier_purple};
 `;
 
-const MobilePlayerImageGroup = styled.div`
-    display: flex;
-    flex-direction: column;
-`;
-
 const PlayerImage = styled.img`
     flex: 3;
-    max-width: 20em;
+    height: 23.5em;
+    max-width: 15em;
+    margin-top: 1em;
+    margin-left: 0.7em;
+
+    @media screen and (max-width: ${mobileMaxWidth}px) {
+        margin-top: 0.8em;
+        margin-left: 1.5em;
+        float: left;
+        max-height: 14em;
+        width: 6em;
+    }
 `;
 
 const PlayerInfo = styled.div`
     flex: 3;
+    margin-top: 0.5em;
     padding-left: 2em;
-    padding-top: 1.5em;
     background-color: ${laurier_purple};
     overflow-y: auto;
+    overflow-x: wrap;
+    overflow-wrap: break-word;
+
+    @media screen and (max-width: ${mobileMaxWidth}px) {
+        padding-left: 1.5em;
+        margin-right: 0.5em;
+    }
 `;
 
 const PlayerName = styled.p`
@@ -171,13 +183,26 @@ const PlayerName = styled.p`
     font-weight: 800;
     font-size: 3em;
     line-height: 1.2em;
-    color: ${white}
+    color: ${white};
+
+    @media screen and (max-width: ${mobileMaxWidth}px) {
+        font-size: 2em;
+    }
+
+    @media screen and (max-width: ${smallMobileWidth}px) {
+        font-size: 1.5em;
+    }
 `;
 
 const PlayerInfoAttrGroup = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    @media screen and (max-width: ${smallMobileWidth}px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 `;
 
 const PlayerInfoAttrName = styled.p`
@@ -187,6 +212,10 @@ const PlayerInfoAttrName = styled.p`
     line-height: 1em;
     color: ${white};
     margin-right: 0.5em;
+
+    @media screen and (max-width: ${mobileMaxWidth}px) {
+        font-size: 0.75em;
+    }
 `;
 
 const PlayerInfoAttrValue = styled(PlayerInfoAttrName)`
@@ -198,7 +227,7 @@ const PlayerPositionBlock = styled.div`
     justify-content: center;
     align-items: center;
     flex: 2;
-    margin-top: 0.8em;
+    margin-top: 1em;
     margin-left: 0.5em;
     margin-right: 0.8em;
     max-height: 10em;
@@ -211,6 +240,7 @@ const PlayerPositionBlock = styled.div`
         margin-left: 0em;
         margin-right: 0em;
     }
+
 `;
 
 const PlayerPosition = styled.p`
@@ -220,6 +250,11 @@ const PlayerPosition = styled.p`
     font-size: 7em;
     line-height: 1em;
     color: ${laurier_purple};
+
+
+    @media screen and (max-width: ${mobileMaxWidth}px) {
+        font-size: 4em;
+    }
 `;
 
 const PlayerPositionSmaller = styled(PlayerPosition)`
