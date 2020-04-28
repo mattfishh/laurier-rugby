@@ -13,5 +13,5 @@ ID: 160349530
 Email: horn9530@mylaurier.ca
 
 Project statement: I claim that the enclosed submission is the shared work of the team members
-Link to the github account: https://github.com/mattfishh
-URL (used for last phase): https://github.com/mattfishh/laurier-rugby
+Link to the github account: https://github.com/mattfishh/laurier-rugby
+URL (used for last phase): https://laurier-rugby.herokuapp.com/
