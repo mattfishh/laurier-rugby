@@ -53,7 +53,7 @@ class RecruitForm extends React.Component {
         const inputTargets =[this.state.nameInputValue.trim(),this.state.positionInputValue.trim(),this.state.heightInputValue.trim(),this.state.weightInputValue.trim(),this.state.highSchoolInputValue.trim(),this.state.emailInputValue.trim(),this.state.emailInputValue.trim(), this.state.dupEmailInputValue.trim(), this.state.interestedInputValue.trim(), this.state.personalMsgInputValue.trim()]
         const inputTargetsLength = 9
 
-        {/*Error handling function for duplicate emails, non-empty fields. Set states for the error message class and text */}
+        /*Error handling function for duplicate emails, non-empty fields. Set states for the error message class and text */
         for (var i = 0; i < inputTargetsLength; i++) {
             if (inputTargets[i] === '') {
                 valid = false
@@ -79,7 +79,7 @@ class RecruitForm extends React.Component {
     }
 
     sendMessage() {
-        {/* Create form data object to pas sover inputs, to previously identified entry ids in a google form*/}
+        /* Create form data object to pas sover inputs, to previously identified entry ids in a google form*/
         const formData = new FormData()
 
         formData.append(GOOGLE_FORM_NAME_ID, this.state.nameInputValue)
@@ -91,10 +91,10 @@ class RecruitForm extends React.Component {
         formData.append(GOOGLE_FORM_PROGRAMS_ID, this.state.interestedInputValue)
         formData.append(GOOGLE_FORM_MSG_ID, this.state.personalMsgInputValue)
 
-        {/* Use axios to send the formData object to the google form*/}
+        /* Use axios to send the formData object to the google form*/
         axios.post(GOOGLE_FORM_ACTION_URL, formData) 
 
-        {/* Reset state values*/}
+        /* Reset state values*/
         this.setState({
             nameInputValue: '',
             positionInputValue: '',

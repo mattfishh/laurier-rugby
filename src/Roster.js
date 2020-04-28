@@ -83,10 +83,13 @@ const RosterFlex = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+
+    align-items: flex-end;
 `;
 const RosterCard = styled.div`
     display: flex;
     flex-direction: column;
+
     height: 15em;
     margin: 0em 0.5em;
     margin-bottom: 10em;
@@ -95,8 +98,10 @@ const RosterCard = styled.div`
 const RosterImage = styled.img`
     flex: 1;
     justify-content: center;
-    max-width: 10em;
-    aspect-ratio: 2/3;
+    min-width:100%
+
+    width: 160;
+    height: 230;
 `;
 
 const PlayerName = styled.div`

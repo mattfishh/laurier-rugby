@@ -8,11 +8,16 @@ div.siteBody{
 	flex-wrap: wrap;
 }
 
-div.previousScoreDiv{
-	width: 650px;
+div.recentGame{
+	margin-top: 2%;
+
 }
 
 div.carousel-inner{
 	height:auto;
 	width: 650px;
+}
+
+.openSansFontFamily {
+	font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }

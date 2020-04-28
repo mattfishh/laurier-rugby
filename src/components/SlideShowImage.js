@@ -22,8 +22,8 @@ class SlideShowImage extends React.Component {
 							<img className="d-block w-100" src={subImgArr[0]} alt="First slide"/>
 
 							<Carousel.Caption>
-						  		<h3>{subImgArr[1]}</h3>
-						  		<p>{subImgArr[2]}</p>
+						  		<h3 class='openSansFontFamily'>{subImgArr[1]}</h3>
+						  		<p class='openSansFontFamily'>{subImgArr[2]}</p>
 							</Carousel.Caption>
 						</Carousel.Item>
 					))}
