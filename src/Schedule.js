@@ -26,6 +26,9 @@ const GET_SCHEDULE = gql`
     }
 `;
 
+// pixels
+const mobileMaxWidth = 700;
+
 export const Schedule = () => (
     <>
         <div style={{ marginTop: '2em' }} />
@@ -85,6 +88,12 @@ export const OpponentImage = styled.img`
     max-width: 6em;
     height: auto;
     margin: 1em 2em 1em 2em;
+
+    @media screen and (max-width: ${mobileMaxWidth}px) {
+        max-width: 5em;
+        margin-left: 0.75em;
+        margin-right: 0.5em;
+    }
 `;
 
 export const GameInfo = styled.div`
@@ -93,6 +102,11 @@ export const GameInfo = styled.div`
     flex-direction: column;
     justify-content: center;
     margin: 1em 2em 1em 0em;
+
+    @media screen and (max-width: ${mobileMaxWidth}px) {
+        margin-left: 0.5em;
+        margin-right: 0.75em;
+    }
 `;
 
 export const GameTitle = styled.p`
@@ -102,6 +116,11 @@ export const GameTitle = styled.p`
     font-size: 1em;
     line-height: 1.2em;
     margin: 0em 0em 0.5em 0em;
+
+    @media screen and (max-width: ${mobileMaxWidth}px) {
+        font-size: 1em;
+        font-size: 0.75em;
+    }
 `;
 
 export const GameDate = styled.p`
@@ -110,6 +129,10 @@ export const GameDate = styled.p`
     font-size: 1em;
     line-height: 1.2em;
     margin: 0;
+
+    @media screen and (max-width: ${mobileMaxWidth}px) {
+        font-size: 0.75em;
+    }
 `;
 
 export const GameResult = styled.div`
@@ -128,4 +151,8 @@ export const ScoreText = styled.p`
     font-size: 1.7em;
     line-height: 41px;
     text-align: center;
+
+    @media screen and (max-width: ${mobileMaxWidth}px) {
+        font-size: 0.85em;
+    }
 `;
