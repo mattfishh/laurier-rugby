@@ -1,9 +1,9 @@
-import React from 'react'
-import './components/Home.css'
+import React from 'react';
+import './components/Home.css';
 import SlideShowImage from './components/SlideShowImage';
 import { Query } from '@apollo/react-components';
 import { gql } from 'apollo-boost';
-import {GameCard, OpponentImage, GameInfo, GameTitle, GameDate, GameResult, ScoreText} from './Schedule'
+import {GameCard, OpponentImage, GameInfo, GameTitle, GameDate, GameResult, ScoreText} from './Schedule';
 
 var moment = require('moment');
 
@@ -78,3 +78,4 @@ export const Home = () => (
 	    </div>
     </div>
 )
+

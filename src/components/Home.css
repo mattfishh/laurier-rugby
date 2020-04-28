@@ -16,6 +16,12 @@ div.recentGame{
 div.carousel-inner{
 	height:auto;
 	width: 650px;
+	background-color: #000000;
+}
+
+
+.carousel-inner img{
+	opacity: 0.5;
 }
 
 .openSansFontFamily {
