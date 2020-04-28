@@ -50,20 +50,3 @@ a.nav-link {
 	color: #3A175C;
 	background-color: white;
 }
-
-.dropdown-menu{
-	background-color: #3A175C;
-	color:white;
-	border-color: #3A175C;
-}
-
-.dropdown-item {
-	background-color: #3A175C;
-	color:white;
-	font-weight:bold;
-}
-
-.dropdown-item:hover {
-	color: #3A175C;
-	background-color:white;
-}

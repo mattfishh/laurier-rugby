@@ -1,6 +1,5 @@
 import React from 'react';
 import './Alumni.css';
-import styled from 'styled-components'
 
 const TIER_CLASSES = ['tierBackgroundPurple','tierBackgroundYellow'];
 const GOLD_TIER = ['CHARLIE HORNER - Class of 2011', 'Matt Goldman - Class of 1989','Russell Horner - Class of 1970','Russell Horner - Class of 1996','Mike Fish - Class of 1983','Russell Goldman - Class of 2019','Matt Horner - Class of 1961','Charlie Horner - Class of 2002','Charlie Fish - Class of 1968','Ben Horner - Class of 1968','Mike Taylor - Class of 1967'];
@@ -16,23 +15,23 @@ class AlumniTier extends React.Component {
 		var hiddenIconClass = 'hideLi';
 
 		if(this.props.inputtedTier === 0){
-			var tierData =[...PURPLE_TIER];
-			var hiddenIconClass = hiddenIconClass + 'Purple';
+			tierData =[...PURPLE_TIER];
+			hiddenIconClass = hiddenIconClass + 'Purple';
 		} else if (this.props.inputtedTier === 1) {
-			var tierData =[...GOLD_TIER];
-			var hiddenIconClass = hiddenIconClass + 'Yellow';
+			tierData =[...GOLD_TIER];
+			hiddenIconClass = hiddenIconClass + 'Yellow';
 		}
 
-		{/*Assign column item sizes */}
+		/*Assign column item sizes */
 		var tierDataLength = tierData.length;
 		var col1Size = Math.ceil(tierDataLength/2);
 		var col2Size = Math.floor(tierDataLength/2);
 
-		{/*Splice data into two arrays*/}
+		/*Splice data into two arrays*/
 		var col1 = tierData.splice(0, col1Size);
 		var col2 = [...tierData];
 
-		{/*Check if columns are different size. If so add a blank item to second col*/}
+		/*Check if columns are different size. If so add a blank item to second col*/
 		if(col1Size !== col2Size){
 			col2.push('-');
 		}

@@ -6,6 +6,7 @@ import NavBar from './NavBar';
 
 import { ApolloProvider } from '@apollo/react-hooks';
 import client from './ApolloClient';
+import './index.css'
 
 /* <link
   rel="stylesheet"

@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import { laurier_purple, white, black } from './colours';
 var moment = require('moment');
 
+
 const GET_SCHEDULE = gql`
     query GetSchedules {
         allSchedules(orderBy: GAME_TIME_DESC) {
@@ -70,7 +71,7 @@ export const Schedule = () => (
     </>
 );
 
-const GameCard = styled.div`
+export const GameCard = styled.div`
     display: flex;
     flex-direction: row;
     border: 5px solid ${laurier_purple};
@@ -79,14 +80,14 @@ const GameCard = styled.div`
     margin-bottom: 1em;
 `;
 
-const OpponentImage = styled.img`
+export const OpponentImage = styled.img`
     flex: 1;
     max-width: 6em;
     height: auto;
     margin: 1em 2em 1em 2em;
 `;
 
-const GameInfo = styled.div`
+export const GameInfo = styled.div`
     flex: 4;
     display: flex;
     flex-direction: column;
@@ -94,7 +95,7 @@ const GameInfo = styled.div`
     margin: 1em 2em 1em 0em;
 `;
 
-const GameTitle = styled.p`
+export const GameTitle = styled.p`
     color: ${black};
     font-style: normal;
     font-weight: bold;
@@ -103,7 +104,7 @@ const GameTitle = styled.p`
     margin: 0em 0em 0.5em 0em;
 `;
 
-const GameDate = styled.p`
+export const GameDate = styled.p`
     color: ${black};
     font-style: normal;
     font-size: 1em;
@@ -111,7 +112,7 @@ const GameDate = styled.p`
     margin: 0;
 `;
 
-const GameResult = styled.div`
+export const GameResult = styled.div`
     flex: 2;
     display: flex;
     flex-direction: column;
@@ -120,7 +121,7 @@ const GameResult = styled.div`
     background-color: ${laurier_purple};
 `;
 
-const ScoreText = styled.p`
+export const ScoreText = styled.p`
     color: ${white};
     font-style: normal;
     font-weight: 800;
